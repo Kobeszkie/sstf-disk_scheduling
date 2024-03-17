@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSTF Disk Scheduling</title>
+    <link rel="stylesheet" type="text/css" href="project.css" />
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>SSTF Disk Scheduling</h1>
+    <br />
+    <p>
+      a disk scheduling algorithm that selects the request with the minimum seek
+      time from the current head position.
+    </p>
+    <form id="sstfForm">
+      <label for="tracks">Number of Tracks:</label>
+      <input
+        type="number"
+        id="tracks"
+        name="tracks"
+        min="100"
+        max="300"
+        required
+      />
+      <br />
+      <label for="prev">Previous Track:</label>
+      <input type="number" id="prev" name="prev" min="0" max="299" required />
+      <br />
+      <label for="current">Current Track:</label>
+      <input
+        type="number"
+        id="current"
+        name="current"
+        min="0"
+        max="299"
+        required
+      />
+      <br />
+      <label for="requested">Number of Requested Tracks:</label>
+      <input
+        type="number"
+        id="requested"
+        name="requested"
+        min="10"
+        max="20"
+        required
+      />
+      <br />
+      <label for="seek">Seek Rate:</label>
+      <input type="number" id="seek" name="seek" min="1" max="200" required />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display the output here -->
+    <div id="output"></div>
+
+    <!-- Canvas element for the Chart.js chart -->
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <!-- Include the JavaScript file -->
+    <script src="project.js"></script>
+  </body>
+</html>
